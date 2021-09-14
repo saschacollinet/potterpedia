@@ -1,0 +1,67 @@
+.main {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+
+.main.gryffindor {
+  background: repeating-linear-gradient(
+    45deg,
+    #c6a513,
+    #c6a513 3px,
+    #6d0000 3px,
+    #6d0000 9px,
+    #c6a513 9px,
+    #c6a513 10px,
+    #6d0000 10px,
+    #6d0000 30px
+  );
+}
+
+.main.slytherin {
+  background: repeating-linear-gradient(
+    45deg,
+    #7a7a7a,
+    #7a7a7a 3px,
+    #0b3a07 3px,
+    #0b3a07 9px,
+    #7a7a7a 9px,
+    #7a7a7a 10px,
+    #0b3a07 10px,
+    #0b3a07 30px
+  );
+}
+
+.main.ravenclaw {
+  background: repeating-linear-gradient(
+    45deg,
+    #7a7a7a,
+    #7a7a7a 3px,
+    #191c68 3px,
+    #191c68 9px,
+    #7a7a7a 9px,
+    #7a7a7a 10px,
+    #191c68 10px,
+    #191c68 30px
+  );
+}
+
+.main.hufflepuff {
+  background: repeating-linear-gradient(
+    45deg,
+    #161616,
+    #161616 3px,
+    #c6a513 3px,
+    #c6a513 9px,
+    #161616 9px,
+    #161616 10px,
+    #c6a513 10px
+  );
+}
