@@ -15,10 +15,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  background-image: url(../images/parchment.jpeg);
 }
 
 .footer__img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.footer__button.footer-active {
+  background-image: url(../images/fire.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
