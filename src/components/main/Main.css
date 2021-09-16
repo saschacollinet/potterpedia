@@ -11,7 +11,7 @@
   min-height: 100vh;
 }
 
-.main.gryffindor {
+.main.Gryffindor {
   background: repeating-linear-gradient(
     45deg,
     #c6a513,
@@ -25,7 +25,7 @@
   );
 }
 
-.main.slytherin {
+.main.Slytherin {
   background: repeating-linear-gradient(
     45deg,
     #7a7a7a,
@@ -39,7 +39,7 @@
   );
 }
 
-.main.ravenclaw {
+.main.Ravenclaw {
   background: repeating-linear-gradient(
     45deg,
     #7a7a7a,
@@ -53,7 +53,7 @@
   );
 }
 
-.main.hufflepuff {
+.main.Hufflepuff {
   background: repeating-linear-gradient(
     45deg,
     #161616,

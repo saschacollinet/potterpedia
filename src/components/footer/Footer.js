@@ -3,10 +3,8 @@ import Gryffindor from '../images/gryffindor.png'
 import Slytherin from '../images/slytherin.png'
 import Ravenclaw from '../images/ravenclaw.png'
 import Hufflepuff from '../images/hufflepuff.png'
-import { useState } from 'react'
 
-function Footer() {
-  const [activeHouse, setActiveHouse] = useState('Gryffindor')
+function Footer({ activeHouse, onFooterButtonClick }) {
   return (
     <footer className="footer">
       <nav className="footer__nav">
@@ -15,7 +13,7 @@ function Footer() {
             activeHouse === 'Gryffindor' ? 'footer-active' : ''
           }`}
           id="footer__gryffindor"
-          onClick={() => setActiveHouse('Gryffindor')}
+          onClick={() => onFooterButtonClick('Gryffindor')}
         >
           <img src={Gryffindor} alt="Gryffindor" className="footer__img" />
         </button>
@@ -24,7 +22,7 @@ function Footer() {
             activeHouse === 'Slytherin' ? 'footer-active' : ''
           }`}
           id="footer__slytherin"
-          onClick={() => setActiveHouse('Slytherin')}
+          onClick={() => onFooterButtonClick('Slytherin')}
         >
           <img src={Slytherin} alt="Slytherin" className="footer__img" />
         </button>
@@ -33,7 +31,7 @@ function Footer() {
             activeHouse === 'Ravenclaw' ? 'footer-active' : ''
           }`}
           id="footer__ravenclaw"
-          onClick={() => setActiveHouse('Ravenclaw')}
+          onClick={() => onFooterButtonClick('Ravenclaw')}
         >
           <img src={Ravenclaw} alt="Ravenclaw" className="footer__img" />
         </button>
@@ -42,7 +40,7 @@ function Footer() {
             activeHouse === 'Hufflepuff' ? 'footer-active' : ''
           }`}
           id="footer__hufflepuff"
-          onClick={() => setActiveHouse('Hufflepuff')}
+          onClick={() => onFooterButtonClick('Hufflepuff')}
         >
           <img src={Hufflepuff} alt="Hufflepuff" className="footer__img" />
         </button>
