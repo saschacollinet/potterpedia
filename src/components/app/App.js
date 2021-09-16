@@ -1,17 +1,22 @@
 import './App.css'
-import data from '../../data.json'
 import Header from '../header/Header'
 import Main from '../main/Main'
 import Card from '../card/Card'
 import Footer from '../footer/Footer'
 import React from 'react'
+import { useState } from 'react'
 
-function App() {
+function App({ data }) {
+  const [activeHouse, setActiveHouse] = useState('Gryffindor')
+  function handleFooterButtonClick(house) {
+    setActiveHouse(house)
+  }
+  const filteredData = data.filter(character => character.house === activeHouse)
   return (
     <div>
       <Header />
-      <Main>
-        {data.map(character => (
+      <Main activeHouse={activeHouse}>
+        {filteredData.map(character => (
           <Card
             image={character.image}
             name={character.name}
@@ -26,7 +31,10 @@ function App() {
           />
         ))}
       </Main>
-      <Footer />
+      <Footer
+        activeHouse={activeHouse}
+        onFooterButtonClick={handleFooterButtonClick}
+      />
     </div>
   )
 }

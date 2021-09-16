@@ -1,7 +1,7 @@
 import './Main.css'
 
-function Main(props) {
-  return <main className="main gryffindor">{props.children}</main>
+function Main({ activeHouse, children }) {
+  return <main className={`main ${activeHouse}`}>{children}</main>
 }
 
 export default Main

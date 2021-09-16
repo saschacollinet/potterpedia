@@ -5,16 +5,16 @@ import { useState } from 'react'
 
 function Card(props) {
   const [isPageTurned, setIsPageTurned] = useState(false)
-  const [showEmoji, setShowEmoji] = useState('')
-  const dead = props.alive
+  const [emoji, setEmoji] = useState('')
+  const isAlive = props.alive
   const handleTurnPageButtonClick = () => {
     setIsPageTurned(!isPageTurned)
   }
-  const handleEmojiButtonClick = emoji => {
-    if (showEmoji === emoji) {
-      setShowEmoji('')
+  const handleEmojiButtonClick = currentEmoji => {
+    if (emoji === currentEmoji) {
+      setEmoji('')
     } else {
-      setShowEmoji(emoji)
+      setEmoji(currentEmoji)
     }
   }
   return (
@@ -26,9 +26,7 @@ function Card(props) {
             src={props.image}
             alt={`of ${props.name}`}
           />
-          {dead ? (
-            console.log(true)
-          ) : (
+          {!isAlive && (
             <img className="deceased" src={deceased} alt="deceased" />
           )}
           <button
@@ -67,7 +65,7 @@ function Card(props) {
               </button>
             </div>
             <h2>
-              {showEmoji} {props.name}
+              {emoji} {props.name}
             </h2>
             <p>Species: {props.species}</p>
             <p>Gender: {props.gender}</p>
