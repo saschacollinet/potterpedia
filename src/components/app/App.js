@@ -7,16 +7,37 @@ import React from 'react'
 import { useState } from 'react'
 
 function App({ data }) {
-  const [activeHouse, setActiveHouse] = useState('Gryffindor')
-  function handleFooterButtonClick(house) {
-    setActiveHouse(house)
+  const [activeHouse, setActiveHouse] = useState(() => {
+    if (localStorage.getItem('activeHouseLocalStorage')) {
+      return JSON.parse(localStorage.getItem('activeHouseLocalStorage'))
+    } else {
+      return 'All'
+    }
+  })
+
+  function handleFooterButtonClick(newActivehouse) {
+    if (activeHouse === newActivehouse) {
+      setActiveHouse('All')
+    } else {
+      setActiveHouse(newActivehouse)
+    }
+    const stringifiedValue = JSON.stringify(newActivehouse)
+    if (stringifiedValue === JSON.stringify(activeHouse)) {
+      localStorage.removeItem('activeHouseLocalStorage')
+    } else {
+      localStorage.setItem('activeHouseLocalStorage', stringifiedValue)
+    }
   }
+
   const filteredData = data.filter(character => character.house === activeHouse)
+
+  const shownData = activeHouse === 'All' ? data : filteredData
+
   return (
     <div>
       <Header />
       <Main activeHouse={activeHouse}>
-        {filteredData.map(character => (
+        {shownData.map(character => (
           <Card
             image={character.image}
             name={character.name}
