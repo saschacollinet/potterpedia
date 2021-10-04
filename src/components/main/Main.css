@@ -9,59 +9,26 @@
   padding-top: 120px;
   padding-bottom: 100px;
   min-height: 100vh;
+  background-image: url('../images/all-background.png');
+  background-size: contain;
 }
 
 .main.Gryffindor {
-  background: repeating-linear-gradient(
-    45deg,
-    #c6a513,
-    #c6a513 3px,
-    #6d0000 3px,
-    #6d0000 9px,
-    #c6a513 9px,
-    #c6a513 10px,
-    #6d0000 10px,
-    #6d0000 30px
-  );
+  background-image: url('../images/gryffindor-background.jpeg');
+  background-size: contain;
 }
 
 .main.Slytherin {
-  background: repeating-linear-gradient(
-    45deg,
-    #7a7a7a,
-    #7a7a7a 3px,
-    #0b3a07 3px,
-    #0b3a07 9px,
-    #7a7a7a 9px,
-    #7a7a7a 10px,
-    #0b3a07 10px,
-    #0b3a07 30px
-  );
+  background-image: url('../images/slytherin-background.png');
+  background-size: contain;
 }
 
 .main.Ravenclaw {
-  background: repeating-linear-gradient(
-    45deg,
-    #7a7a7a,
-    #7a7a7a 3px,
-    #191c68 3px,
-    #191c68 9px,
-    #7a7a7a 9px,
-    #7a7a7a 10px,
-    #191c68 10px,
-    #191c68 30px
-  );
+  background-image: url('../images/ravenclaw-background.jpeg');
+  background-size: contain;
 }
 
 .main.Hufflepuff {
-  background: repeating-linear-gradient(
-    45deg,
-    #161616,
-    #161616 3px,
-    #c6a513 3px,
-    #c6a513 9px,
-    #161616 9px,
-    #161616 10px,
-    #c6a513 10px
-  );
+  background-image: url('../images/hufflepuff-background.jpg');
+  background-size: contain;
 }
